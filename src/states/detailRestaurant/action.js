@@ -2,6 +2,7 @@ import api from "../../utils/api";
 
 const ActionType = {
   GET_DETAIL_RESTAURANT: "GET_DETAIL_RESTAURANT",
+  ADD_CUSTOMER_REVIEW: "ADD_CUSTOMER_REVIEW",
 };
 
 function getDetailRestaurantActionCreator(restaurant) {
@@ -9,6 +10,15 @@ function getDetailRestaurantActionCreator(restaurant) {
     type: ActionType.GET_DETAIL_RESTAURANT,
     payload: {
       restaurant,
+    },
+  };
+}
+
+function addCustomerReviewActionCreator(customerReviews) {
+  return {
+    type: ActionType.ADD_CUSTOMER_REVIEW,
+    payload: {
+      customerReviews,
     },
   };
 }
@@ -24,4 +34,15 @@ function receiveDetailRestaurant(id) {
   };
 }
 
-export { ActionType, getDetailRestaurantActionCreator, receiveDetailRestaurant };
+function asyncAddCustomerReview({ name, review }) {
+  return async (dispatch) => {
+    dispatch(addCustomerReviewActionCreator({ name, review }));
+    try {
+      await api.addReview({ name, review });
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+}
+
+export { ActionType, addCustomerReviewActionCreator, getDetailRestaurantActionCreator, receiveDetailRestaurant, asyncAddCustomerReview };
