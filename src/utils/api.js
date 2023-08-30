@@ -29,28 +29,29 @@ const api = (() => {
     }
     const responseJson = await response.json();
     const { restaurants } = responseJson;
+
     return restaurants;
   }
 
-  async function addReview({ name, review }) {
+  async function addReview({ id, name, review }) {
     const response = await fetch(`${BASE_URL}/review`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        id,
         name,
         review,
       }),
     });
-    const responseJson = response.json();
-    const { error, message } = responseJson;
+    const responseJson = await response.json();
 
-    if (error !== "success") {
+    const { error, message, customerReviews } = responseJson;
+
+    if (error) {
       throw new Error(message);
     }
-
-    const { customerReviews } = responseJson;
 
     return customerReviews;
   }

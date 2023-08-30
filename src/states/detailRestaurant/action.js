@@ -34,11 +34,12 @@ function receiveDetailRestaurant(id) {
   };
 }
 
-function asyncAddCustomerReview({ name, review }) {
+function asyncAddCustomerReview({ id, name, review }) {
   return async (dispatch) => {
-    dispatch(addCustomerReviewActionCreator({ name, review }));
     try {
-      await api.addReview({ name, review });
+      const customerReviews = await api.addReview({ id, name, review });
+      console.log(customerReviews);
+      dispatch(addCustomerReviewActionCreator(customerReviews));
     } catch (error) {
       console.log(error.message);
     }

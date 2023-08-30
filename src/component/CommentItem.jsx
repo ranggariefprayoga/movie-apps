@@ -3,8 +3,9 @@
 function CommentItem({ review }) {
   return (
     <>
-      <div className="review">{review.name}</div>
-      <div className="date"></div>
+      <div className="name">{review.name}</div>
+      <div className="review">{review.review}</div>
+      <div className="date">{review.date}</div>
     </>
   );
 }

@@ -24,4 +24,15 @@ function receiveAllRestaurants() {
   };
 }
 
-export { ActionType, receviveAllRestaurantsActionCreator, receiveAllRestaurants };
+function asyncSearchRestaurants(query) {
+  return async (dispatch) => {
+    try {
+      const restaurants = await api.searchRestaurantByQuery(query);
+      dispatch(receviveAllRestaurantsActionCreator(restaurants));
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+}
+
+export { ActionType, receviveAllRestaurantsActionCreator, receiveAllRestaurants, asyncSearchRestaurants };

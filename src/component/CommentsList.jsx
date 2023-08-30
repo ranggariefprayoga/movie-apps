@@ -4,8 +4,8 @@ import CommentItem from "./CommentItem";
 function CommentList({ customerReviews }) {
   return (
     <>
-      {customerReviews.map((review) => (
-        <CommentItem key={review.name} review={review} />
+      {customerReviews.map((review, idx) => (
+        <CommentItem key={idx} review={review} />
       ))}
     </>
   );

@@ -5,7 +5,7 @@ function detailRestaurantReducer(restaurant = null, action = {}) {
     case ActionType.GET_DETAIL_RESTAURANT:
       return action.payload.restaurant;
     case ActionType.ADD_CUSTOMER_REVIEW:
-      return { ...restaurant, customerReviews: [...restaurant.customerReviews, action.payload.customerReviews] };
+      return { ...restaurant, customerReviews: action.payload.customerReviews };
     default:
       return restaurant;
   }
