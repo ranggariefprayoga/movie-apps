@@ -2,11 +2,13 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePages";
 import DetailPage from "./pages/DetailPage";
-import "./App.css";
+import "./main.css";
+import Navigation from "./component/Navigation";
 
 function App() {
   return (
     <>
+      <Navigation />
       <Routes>
         <Route path="/*" element={<HomePage />} />
         <Route path="/detail/:id" element={<DetailPage />} />
