@@ -9,10 +9,12 @@ function App() {
   return (
     <>
       <Navigation />
-      <Routes>
-        <Route path="/*" element={<HomePage />} />
-        <Route path="/detail/:id" element={<DetailPage />} />
-      </Routes>
+      <main className="p-9 bg-[#f5f5f5]">
+        <Routes>
+          <Route path="/*" element={<HomePage />} />
+          <Route path="/detail/:id" element={<DetailPage />} />
+        </Routes>
+      </main>
     </>
   );
 }

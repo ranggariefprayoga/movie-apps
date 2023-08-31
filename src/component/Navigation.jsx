@@ -1,9 +1,9 @@
 export default function Navigation() {
   return (
-    <div className="grid grid-cols-2 fixed px-8 h-auto shadow-xl z-50 text-white w-full">
+    <div className="grid grid-cols-2 fixed px-8 h-auto bg-gradient-to-r from-violet-500 to-fuchsia-500 shadow-2xl z-50 w-full text-black">
       <div className="flex justify-start items-center">
-        <img src="../../public/restaurants.svg" alt="Restaurants" className="w-12 h-4/5 bg-white rounded opacity-80" />
-        <h1 className="text-2xl font-bold uppercase px-2">Restaurants</h1>
+        <img src="../../public/restaurants.svg" alt="Restaurants" className="w-12 h-4/5  rounded " />
+        <h1 className="text-l sm:text-3xl font-bold uppercase px-2 no-select">Restaurants</h1>
       </div>
       <nav className="flex justify-end items-center w-full gap-4">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="cursor-pointer w-9 h-9  sm:hidden">

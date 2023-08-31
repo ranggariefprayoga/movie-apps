@@ -18,7 +18,22 @@ export default {
         silver: "#ecebff",
         bermuda: "#78dcca",
       },
+      extend: {
+        gridTemplateColumns: {
+          hero: "1fr 2fr",
+          footer: "200px minmax(900px, 1fr) 100px",
+        },
+      },
     },
+    plugins: [
+      function ({ addUtilities }) {
+        const newUtilities = {
+          ".no-select": {
+            "user-select": "none",
+          },
+        };
+        addUtilities(newUtilities);
+      },
+    ],
   },
-  plugins: [],
 };
