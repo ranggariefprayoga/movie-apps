@@ -14,10 +14,10 @@ export default function Navigation() {
           />
         </svg>
         <div className="menu-list gap-4 hidden sm:flex sm:justify-end sm:w-full sm:h-full items-center">
-          <a href="" className="">
+          <a href="/" className="">
             Home
           </a>
-          <a href="" className="">
+          <a href="/" className="">
             Favorite
           </a>
         </div>
