@@ -1,18 +1,14 @@
 import { ActionType } from "./action";
 
-const initialState = {
-  favorites: [],
-};
-
-const favoritesRestaurantReducer = (state = initialState, action) => {
+const favoritesRestaurantReducer = (restaurants = [], action) => {
+  // console.log(typeof state);
   switch (action.type) {
+    case ActionType.RECEIVE_FAVORITE_RESTAURANT:
+      return action.payload.restaurants;
     case ActionType.ADD_FAVORITE_RESTAURANT:
-      return {
-        ...state,
-        favorites: [...state.favorites, action.payload],
-      };
+      return [...restaurants, action.payload.restaurant];
     default:
-      return state;
+      return restaurants;
   }
 };
 

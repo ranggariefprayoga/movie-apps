@@ -6,13 +6,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import { EffectCards } from "swiper/modules";
+import { EffectCards, Pagination, Navigation } from "swiper/modules";
 
 function DetailMenu({ foods, drinks }) {
   return (
     <div className=" container">
-      <h1 className="font-menu font-bold text-center text-4xl mt-7">Menus!</h1>
-      <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} className="mySwiper max-w-3xl gap-2 mt-6">
+      <h1 className="font-menu font-bold text-center text-4xl mt-7">Menus! (Swipe)</h1>
+      <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards, Pagination, Navigation]} loop={true} className="mySwiper max-w-3xl gap-2 mt-6">
         <SwiperSlide className=" bg-white foods grid grid-rows-[0.5fr_2fr] sm:grid-rows-1 sm:grid-cols-[0.8fr_2fr] w-full shadow-xl rounded-lg">
           {" "}
           <div className="bg-gradient-to-r from-fuchsia-500 info flex justify-center items-center sm:flex-col p-2">

@@ -5,12 +5,13 @@ import { useParams } from "react-router-dom";
 import AddReview from "../component/AddReview";
 import DetailMenu from "../component/DetailMenu";
 import HeaderDetailMenu from "../component/HeaderDetailMenu";
+// import { asyncAddFavoriteRestaurant } from "../states/favoriteRestaurant/action";
 
 function DetailPage() {
   const { id } = useParams();
+
   const { detailRestaurant = null } = useSelector((states) => states);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(receiveDetailRestaurant(id));
   }, [id, dispatch]);
@@ -18,8 +19,6 @@ function DetailPage() {
   if (!detailRestaurant) {
     return null;
   }
-
-  console.log(id);
 
   const handleAddCustomerReview = ({ name, review }) => {
     dispatch(asyncAddCustomerReview({ id, name, review }));

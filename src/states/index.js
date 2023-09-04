@@ -7,7 +7,7 @@ const store = configureStore({
   reducer: {
     listRestaurants: listRestaurantsReducer,
     detailRestaurant: detailRestaurantReducer,
-    favoritesRestaurant: favoritesRestaurantReducer,
+    favoriteRestaurant: favoritesRestaurantReducer,
   },
 });
 

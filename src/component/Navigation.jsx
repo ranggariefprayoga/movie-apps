@@ -17,7 +17,7 @@ export default function Navigation() {
           <a href="/" className="">
             Home
           </a>
-          <a href="/" className="">
+          <a href="/favorite" className="">
             Favorite
           </a>
         </div>

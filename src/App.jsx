@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePages";
 import DetailPage from "./pages/DetailPage";
 import "./main.css";
 import Navigation from "./component/Navigation";
+import FavoritePage from "./pages/FavoritePage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/*" element={<HomePage />} />
           <Route path="/detail/:id" element={<DetailPage />} />
+          <Route path="/favorite" element={<FavoritePage />} />
         </Routes>
       </main>
     </>
