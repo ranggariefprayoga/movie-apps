@@ -36,7 +36,7 @@ function AddReview({ handleAddCustomerReview, customerReviews }) {
     <div className="review grid sm:grid-cols-[0.8fr_1fr] md:grid-cols-[1.2fr_2fr] mt-12">
       <form type="submit" onClick={addReview} className="mb-4 sm:mr-2  mx-auto p-4 bg-white rounded-lg shadow-md">
         <div className="icon flex justify-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-blue-500 w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-fuchsia-500 w-6 h-6">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -47,7 +47,7 @@ function AddReview({ handleAddCustomerReview, customerReviews }) {
         </div>
         <input type="text" value={name} onChange={handleNameChange} placeholder="Your Name" className="mt-4 p-2 border rounded-md w-full focus:outline-none focus:ring focus:border-blue-400" />
         <input type="text" value={review} onChange={handleReviewChange} placeholder="Your Review" className="mt-2 p-2 border rounded-md w-full focus:outline-none focus:ring focus:border-blue-400" />
-        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-400">Add Review</button>
+        <button className="mt-4 px-4 py-2 bg-fuchsia-500 text-black rounded-md hover:bg-fuchsia-600 focus:outline-none focus:ring focus:border-fuchsia-400">Add Review</button>
       </form>
       <CommentList customerReviews={customerReviews} />
     </div>
