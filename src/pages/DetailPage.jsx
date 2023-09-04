@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import CommentList from "../component/CommentsList";
 import AddReview from "../component/AddReview";
 import DetailMenu from "../component/DetailMenu";
+import HeaderDetailMenu from "../component/HeaderDetailMenu";
 
 function DetailPage() {
   const { id } = useParams();
@@ -24,14 +25,12 @@ function DetailPage() {
   };
 
   return (
-    <>
-      <div className="detail-page-container" key={detailRestaurant.id}>
-        {detailRestaurant.id}
-      </div>
+    <div className="detail-page-container  overflow-hidden" key={detailRestaurant.id}>
+      <HeaderDetailMenu detailRestaurant={detailRestaurant} />
       <DetailMenu foods={detailRestaurant.menus.foods} drinks={detailRestaurant.menus.drinks} />
       <AddReview detailRestaurant={detailRestaurant} handleAddCustomerReview={handleAddCustomerReview} />
       <CommentList customerReviews={detailRestaurant.customerReviews} />
-    </>
+    </div>
   );
 }
 

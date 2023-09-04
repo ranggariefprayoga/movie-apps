@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 function Drinks({ name }) {
   return (
-    <>
-      <div className="jenis">{name}</div>
-    </>
+    <div className="drinks flex gap-2 p-1">
+      <img src="../../public/drinks.svg" alt="" className="w-6 h-6" />
+      <p className="bg-pink-200">{name}</p>
+    </div>
   );
 }
 
