@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncAddCustomerReview, receiveDetailRestaurant } from "../states/detailRestaurant/action";
 import { useParams } from "react-router-dom";
-// import CommentList from "../component/CommentsList";
 import AddReview from "../component/AddReview";
 import DetailMenu from "../component/DetailMenu";
 import HeaderDetailMenu from "../component/HeaderDetailMenu";
@@ -19,6 +18,8 @@ function DetailPage() {
   if (!detailRestaurant) {
     return null;
   }
+
+  console.log(id);
 
   const handleAddCustomerReview = ({ name, review }) => {
     dispatch(asyncAddCustomerReview({ id, name, review }));

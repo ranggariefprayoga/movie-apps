@@ -5,16 +5,18 @@ import { Link } from "react-router-dom";
 function RestaurantItem({ restaurant }) {
   return (
     <>
-      <div className="restaurant-item w-full shadow-2xl rounded-lg overflow-hidden ">
-        <div className="restaurant__heading relative">
-          <img src={`${BASE_IMAGE_URL}/${restaurant.pictureId}`} alt="" className="image  w-full" />
-          <div className="name absolute p-2 bottom-5 left-0 bg-black inline-block text-black font-bold rounded bg-gradient-to-r from-violet-500 to-fuchsia-500 shadow-2xl ">
+      <div className="w-full shadow-2xl rounded-lg overflow-hidden ">
+        <div className="relative">
+          <div className="image-card relative">
+            <img src={`${BASE_IMAGE_URL}/${restaurant.pictureId}`} alt="" className="image  w-full" />
+          </div>
+          <div className="name p-2 top-5 absolute inline-block left-5 bg-black  text-black font-bold rounded bg-gradient-to-r from-violet-500 to-fuchsia-500 shadow-2xl ">
             <p>{restaurant.name}</p>
           </div>
         </div>
-        <div className="restaurant__content p-4">
-          <h5 className="rating mb-3 flex justify-between items-center">
-            <p className="flex items-center gap-1">
+        <div className=" p-4">
+          <h5 className="rating mb-3 grid">
+            <p className="flex items-center justify-center gap-1">
               {" "}
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 stroke-black-500 transition ease-in-out fill-yellow-500 hover:scale-125 duration-800">
                 <path
@@ -25,7 +27,7 @@ function RestaurantItem({ restaurant }) {
               </svg>{" "}
               <span>Rating {restaurant.rating}</span>
             </p>
-            <Link to={`/detail/${restaurant.id}`} className=" mt-4 px-4 py-2 bg-fuchsia-500 text-black rounded-md hover:bg-fuchsia-600 focus:outline-none focus:border-fuchsia-400 ">
+            <Link to={`/detail/${restaurant.id}`} className="text-center mt-4 px-4 py-2 bg-fuchsia-500 text-black rounded-md hover:bg-fuchsia-600 focus:outline-none focus:border-fuchsia-400 ">
               Lihat detail{" "}
             </Link>
           </h5>

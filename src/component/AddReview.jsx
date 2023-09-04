@@ -30,8 +30,6 @@ function AddReview({ handleAddCustomerReview, customerReviews }) {
     }
   }
 
-  console.log(customerReviews);
-
   return (
     <div className="review grid sm:grid-cols-[0.8fr_1fr] md:grid-cols-[1.2fr_2fr] mt-12">
       <form type="submit" onClick={addReview} className="mb-4 sm:mr-2  mx-auto p-4 bg-white rounded-lg shadow-md">
