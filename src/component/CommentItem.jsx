@@ -2,11 +2,11 @@
 
 function CommentItem({ review }) {
   return (
-    <>
-      <div className="name">{review.name}</div>
-      <div className="review">{review.review}</div>
-      <div className="date">{review.date}</div>
-    </>
+    <div className="review">
+      <h3 className="text-lg font-semibold text-gray-800">{review.name}</h3>
+      <h4 className="text-gray-600">{review.review}</h4>
+      <h5 className="text-sm text-gray-500">{review.date}</h5>
+    </div>
   );
 }
 

@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import BASE_IMAGE_URL from "../config/api-endpoint";
-import Categories from "./Categories";
 
 function HeaderDetailMenu({ detailRestaurant }) {
   //   console.log(detailRestaurant);
@@ -18,7 +17,6 @@ function HeaderDetailMenu({ detailRestaurant }) {
           Address
           <p className="font-normal">{detailRestaurant.address}</p>
         </h3>
-        <Categories categories={detailRestaurant.categories} />
         <h3 className="city font-semibold leading-5">
           City
           <p className="font-normal">{detailRestaurant.city}</p>
