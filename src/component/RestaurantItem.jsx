@@ -25,7 +25,7 @@ function RestaurantItem({ restaurant }) {
               </svg>{" "}
               <span>Rating {restaurant.rating}</span>
             </p>
-            <Link to={`/detail/${restaurant.id}`} className=" relative border-solid border-2 border-fuchsia-500 rounded p-2 font-bold hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 ">
+            <Link to={`/detail/${restaurant.id}`} className=" mt-4 px-4 py-2 bg-fuchsia-500 text-black rounded-md hover:bg-fuchsia-600 focus:outline-none focus:border-fuchsia-400 ">
               Lihat detail{" "}
             </Link>
           </h5>
