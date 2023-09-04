@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { asyncSearchRestaurants, receiveAllRestaurants } from "../states/ListRestaurants/action";
 import RestaurantsList from "../component/RestaurantsList";
 import Jumbotron from "../component/Jumbotron";
+import Loading from "../component/Loading";
 // import SearchQuery from "../component/SearchQuery";
 
 function HomePage() {
@@ -37,7 +38,7 @@ function HomePage() {
           </button>
         </form>
       </div>
-      {listRestaurants.length > 0 ? <RestaurantsList restaurants={listRestaurants} /> : "Restaurant ga jumpa bro !"}
+      {listRestaurants.length > 0 ? <RestaurantsList restaurants={listRestaurants} /> : <Loading />}
     </div>
   );
 }
