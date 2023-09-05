@@ -2,7 +2,7 @@
 function Foods({ name }) {
   return (
     <div className="foods flex gap-2 p-1">
-      <img src="./asset/foods.svg" alt="Foods" className="w-6 h-6" loading="lazy" />
+      <img src="/foods.svg" alt="Foods" className="w-6 h-6" loading="lazy" />
       <p className="inline">{name}</p>
     </div>
   );
