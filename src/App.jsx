@@ -5,7 +5,7 @@ import DetailPage from "./pages/DetailPage";
 import "./main.css";
 import Navigation from "./component/Navigation";
 import FavoritePage from "./pages/FavoritePage";
-import TesPage from "./pages/tesPage";
+import TesPage from "./pages/TesPage";
 
 function App() {
   return (
