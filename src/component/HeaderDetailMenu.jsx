@@ -29,7 +29,7 @@ function HeaderDetailMenu({ detailRestaurant }) {
   return (
     <div className="header-detail overflow-hidden bg-gradient-to-r from-fuchsia-500 grid  sm:grid-cols-2 rounded-lg mt-9 gap-6">
       <div className="image ">
-        <img src={`${BASE_IMAGE_URL}/${detailRestaurant.pictureId}`} alt={detailRestaurant.name} className="rounded-lg w-full h-96 object-cover" />
+        <img src={`${BASE_IMAGE_URL}/${detailRestaurant.pictureId}`} loading="lazy" alt={detailRestaurant.name} className="rounded-lg w-full h-96 object-cover" />
       </div>
       <div className="content flex gap-2 flex-col p-2 mt-4">
         <h3 className="name font-semibold leading-5 text-lg">

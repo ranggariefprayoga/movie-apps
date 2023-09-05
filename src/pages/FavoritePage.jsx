@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { receiveFavoriteRestaurantActionCreator } from "../states/favoriteRestaurant/action";
+import FavoriteRestaurantList from "../component/FavoriteRestaurantList";
+import LoadingFavorite from "../component/LoadingFavorite";
+import JumbotronFavorites from "../component/JumbotronFavorite";
 
 export default function FavoritePage() {
   const { favoriteRestaurant = null } = useSelector((state) => state);
@@ -11,11 +14,9 @@ export default function FavoritePage() {
   }, [dispatch]);
 
   return (
-    <>
-      <div>FavoritePage</div>
-      {favoriteRestaurant.map((restaurant, idx) => (
-        <div key={idx}>{restaurant.name}</div>
-      ))}
-    </>
+    <div className="favorite-page flex flex-col gap-2 mt-8 min-h-screen">
+      <JumbotronFavorites />
+      {favoriteRestaurant.length > 0 ? <FavoriteRestaurantList favoriteRestaurant={favoriteRestaurant} /> : <LoadingFavorite />}
+    </div>
   );
 }

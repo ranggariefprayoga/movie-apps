@@ -8,7 +8,7 @@ function RestaurantItem({ restaurant }) {
       <div className="w-full shadow-2xl rounded-lg overflow-hidden ">
         <div className="relative">
           <div className="image-card relative">
-            <img src={`${BASE_IMAGE_URL}/${restaurant.pictureId}`} alt="" className="image  w-full" />
+            <img src={`${BASE_IMAGE_URL}/${restaurant.pictureId}`} alt={restaurant.name} loading="lazy" className="image  w-full" />
           </div>
           <div className="name p-2 top-5 absolute inline-block left-5 bg-black  text-black font-bold rounded bg-gradient-to-r from-violet-500 to-fuchsia-500 shadow-2xl ">
             <p>{restaurant.name}</p>

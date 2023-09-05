@@ -28,7 +28,6 @@ function HomePage() {
   return (
     <div className="home-page">
       <Jumbotron />
-      {/* <SearchQuery handleSubmit={handleSubmit} handleSearch={handleSearch} /> */}
       <div className="search-query flex flex-col gap-2 mt-8" id="search">
         <h2 className="  inline-block p-1 animate-bounce text-3xl font-bold leading-normal text-center drop-shadow-2xl underline underline-offset-8 decoration-indigo-500">Find, Now!</h2>
         <form onSubmit={handleSubmit} className="mb-6 mt-4 flex">

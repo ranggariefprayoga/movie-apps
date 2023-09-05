@@ -2,7 +2,7 @@ export default function Navigation() {
   return (
     <div className="grid grid-cols-2 fixed px-8 h-auto bg-gradient-to-r from-violet-500 to-fuchsia-500 shadow-2xl z-50 w-full text-black">
       <div className="flex justify-start items-center">
-        <img src="../../public/restaurants.svg" alt="Restaurants" className="w-12 h-4/5  rounded " />
+        <img src="../../public/restaurants.svg" alt="Restaurants" className="w-12 h-4/5  rounded " loading="lazy" />
         <h1 className="text-l sm:text-3xl font-bold uppercase px-2 no-select">Restaurants</h1>
       </div>
       <nav className="flex justify-end items-center w-full gap-4">
@@ -14,10 +14,10 @@ export default function Navigation() {
           />
         </svg>
         <div className="menu-list gap-4 hidden sm:flex sm:justify-end sm:w-full sm:h-full items-center">
-          <a href="/" className="">
+          <a href="/" className="hover:text-white">
             Home
           </a>
-          <a href="/favorite" className="">
+          <a href="/favorite" className="hover:text-white">
             Favorite
           </a>
         </div>
