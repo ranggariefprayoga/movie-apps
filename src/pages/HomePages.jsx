@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { asyncSearchRestaurants, receiveAllRestaurants } from "../states/ListRestaurants/action";
+import { asyncSearchRestaurants, receiveAllRestaurants } from "../states/listRestaurant/action";
 import RestaurantsList from "../component/RestaurantsList";
 import Jumbotron from "../component/Jumbotron";
 import Loading from "../component/Loading";
-// import SearchQuery from "../component/SearchQuery";
 
 function HomePage() {
   const { listRestaurants = [] } = useSelector((states) => states);
