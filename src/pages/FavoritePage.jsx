@@ -16,7 +16,7 @@ export default function FavoritePage() {
   return (
     <div className="favorite-page flex flex-col gap-2 mt-8 min-h-screen">
       <JumbotronFavorites />
-      {favoriteRestaurant.length > 0 || favoriteRestaurant === null ? <FavoriteRestaurantList favoriteRestaurant={favoriteRestaurant} /> : <LoadingFavorite />}
+      {favoriteRestaurant !== null ? <FavoriteRestaurantList favoriteRestaurant={favoriteRestaurant} /> : <LoadingFavorite />}
     </div>
   );
 }

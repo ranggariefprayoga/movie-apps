@@ -3,7 +3,7 @@ import Star from "./Star";
 
 function JumbotronFavorite() {
   return (
-    <div className="jumbotron-container overflow-hidden mt-9 max-h-96  grid md:grid-cols-[60%_40%] bg-gradient-to-r from-fuchsia-500 rounded-3xl">
+    <div className="jumbotron-container overflow-hidden mt-2 max-h-96  grid md:grid-cols-[60%_40%] bg-gradient-to-r from-fuchsia-500 rounded-3xl">
       <img src="/favoriteJumbotron.jpg" alt="Jumbotron" className="rounded-3xl h-50 object-cover  " loading="lazy" />
       <div className="hidden sm:flex items-center justify-start flex-col w-full sm:mt-9 ">
         <h1 className="text-black  text-3xl font-bold leading-normal p-2  ml-8">
