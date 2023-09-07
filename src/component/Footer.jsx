@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="footer bg-gradient-to-r from-violet-500 to-fuchsia-500 p-4 ">
-      <div className="p">&copy; Rangga`s Website. All rights reserved.</div>
+    <footer className="footer bg-[#212A3E] p-4 ">
+      <div className="p text-white">&copy; Rangga`s Website. All rights reserved.</div>
     </footer>
   );
 };

@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Navigation />
-      <main className="p-9 bg-[#f5f5f5]">
+      <main className="p-9 bg-[#212A3E]">
         <Routes>
           <Route path="/*" element={<HomePage />} />
           <Route path="/detail/:id" element={<DetailPage />} />

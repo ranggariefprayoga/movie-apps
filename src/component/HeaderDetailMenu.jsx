@@ -27,20 +27,20 @@ function HeaderDetailMenu({ detailRestaurant }) {
   };
 
   return (
-    <div className="header-detail overflow-hidden bg-gradient-to-r from-fuchsia-500 grid  sm:grid-cols-2 rounded-lg mt-9 gap-6">
+    <div className="header-detail overflow-hidden bg-[#394867]  grid  sm:grid-cols-2 rounded-lg mt-9 gap-6">
       <div className="image ">
         <img src={`${BASE_IMAGE_URL}/${detailRestaurant.pictureId}`} loading="lazy" alt={detailRestaurant.name} className="rounded-lg w-full h-96 object-cover" />
       </div>
-      <div className="content flex gap-2 flex-col p-2 mt-4">
-        <h3 className="name font-semibold leading-5 text-lg">
+      <div className="content flex gap-2 flex-col p-2 mx-4 sm:mt-6">
+        <h3 className="name font-semibold leading-5 text-lg text-white">
           Name
-          <p className="font-normal text-base">{detailRestaurant.name}</p>
+          <p className="font-normal text-base text-white">{detailRestaurant.name}</p>
         </h3>
-        <h3 className="address font-semibold leading-5">
+        <h3 className="address font-semibold leading-5 text-white">
           Address
           <p className="font-normal">{detailRestaurant.address}</p>
         </h3>
-        <h3 className="city font-semibold leading-5">
+        <h3 className="city font-semibold leading-5 text-white">
           City
           <p className="font-normal">{detailRestaurant.city}</p>
         </h3>
@@ -53,19 +53,19 @@ function HeaderDetailMenu({ detailRestaurant }) {
               d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
             />
           </svg>{" "}
-          <p className="font-normal">{detailRestaurant.rating}</p>
+          <p className="font-normal text-white">{detailRestaurant.rating}</p>
         </h3>
-        <form className="icon">
+        <form className="icon ">
           {favorite ? (
             <>
-              <h3 className="font-semibold leading-5 mt-4">Remove From Favorite!</h3>
+              <h3 className="font-semibold leading-5 mt-4 text-white">Remove From Favorite!</h3>
               <svg onClick={handleFavoriteRestaurant} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red" className="w-12 h-12 cursor-pointer transition-all duration-200 hover:scale-125">
                 <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
               </svg>
             </>
           ) : (
             <>
-              <h3 className="font-semibold leading-5 mt-4">Add to Favorite!</h3>
+              <h3 className="font-semibold leading-5 mt-4 text-white">Add to Favorite!</h3>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
