@@ -12,10 +12,13 @@ export default function FavoritePage() {
     dispatch(receiveFavoriteRestaurantActionCreator(data));
   }, [dispatch]);
 
+  let keys = Object.keys(localStorage);
+  let jumlahData = keys.length;
+
   return (
     <div className="favorite-page flex flex-col gap-2 mt-8 min-h-screen">
       <JumbotronFavorites />
-      {favoriteRestaurant !== null ? (
+      {favoriteRestaurant !== null || favoriteRestaurant > 0 || jumlahData > 0 ? (
         <FavoriteRestaurantList favoriteRestaurant={favoriteRestaurant} />
       ) : (
         <div className="loading flex flex-col justify-center items-center m-9 gap-2 bg-white" id="favorite">
