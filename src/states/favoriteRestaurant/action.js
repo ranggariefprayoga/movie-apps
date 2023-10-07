@@ -41,13 +41,11 @@ function asyncAddFavoriteRestaurant(restaurant) {
         const data = JSON.stringify([restaurant]);
         localStorage.setItem("favorite", data);
         dispatch(addRestaurantFavoriteActionCreator(restaurant));
-        console.log("restaurant favorit pertama");
       } else {
         restaurantFavorites.push(restaurant);
         const data = JSON.stringify(restaurantFavorites);
         localStorage.setItem("favorite", data);
         dispatch(addRestaurantFavoriteActionCreator(restaurant));
-        console.log("restaurant favorit kedua");
       }
     } catch (error) {
       console.log(error.message);

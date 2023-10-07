@@ -31,7 +31,7 @@ function RestaurantItem({ restaurant }) {
               Lihat detail{" "}
             </Link>
           </h5>
-          <p className="line-clamp-4 text-white ">{restaurant.description}</p>
+          <p className="line-clamp-4 text-white text-justify ">{restaurant.description}</p>
         </div>
       </div>
     </>
